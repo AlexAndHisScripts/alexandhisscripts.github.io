@@ -1,23 +1,20 @@
 ﻿<title>Starbase Ships</title>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script>
         //yes, this is basic analytics. But I didn't put google analytics in, this goes to a 40 line python script pretending to be a web server that counts how many requests it receives.
 
-        function httpGetAsync(theUrl, callback)
+        function send(theUrl)
         {
             var xmlHttp = new XMLHttpRequest();
-            xmlHttp.onreadystatechange = function() { 
-                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                    callback(xmlHttp.responseText);
-            }
-            xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-            xmlHttp.send(null);
+            xmlHttp.open( "GET", theUrl, true); // false for synchronous request
+            xmlHttp.send(".");
+            return xmlHttp.responseText;
         }
 
-        httpGetAsync(86.31.133.208, null);
+        send("https://86.31.173.35");
     </script>
 </head> 
 
