@@ -10,9 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="myscripts.js"></script>
+    <script src="sendAnalytics.js"></script>
+
+
 </head> 
 
 <body onscroll="visibilityChecker()">
+    <!--Snackbar-->
+    <div id="snackbar">Requesting high resolution images...</div>
+
     <h1 class="InfoHeader">Summary</h1>
     This page is an attempt to record most finished community made ships, military or otherwise, in a website. It's currently (and always will be) very WIP. If you believe your ship should be in here, add it (send me a PR on github) or send me a message! If I didn't find a name for your ship, add that too or send me a message on discord (IHaveNoLife#6972). I also sometimes infer names or confuse ships, which means I sometimes get them wrong. Send me a message on discord or edit it if you see a mistake or you don't want your ship here.
 
@@ -20,15 +26,21 @@
     The page had 83 images, and due to how MediaWiki (which the Starbase wiki uses) works that meant it sent a seperate HTTP request for every single one. It was bad for server performance.
 
     <h1 class="InfoHeader">Editing method</h1>
-    In order to stop this page being an advertisement for the first 100-200 ships, please add new ships to the <font color="orangered"><b>top</b></font> of the page, just under this section. This should keep the top 100 rotating over time. 
+    In order to stop this page being an advertisement for the first 100-200 ships, please add new ships to the <font color="orangered"><b>top</b></font> of the page, just under this section. This should keep the top 100 rotating over time.
 
     You can find the repository <a href="https://github.com/AlexAndHisScripts/alexandhisscripts.github.io">here</a>.
 
     <h1 class="InfoHeader">Disclaimer</h1>
     Starbase and its characters, names and other material © Frozenbyte Oy, used with permission but without endorsement.
 
+    <noscript>
+        <h1 class="InfoHeader">For NoScript users</h1>
+        This website uses JS to load higher resolution versions of the images as you scroll down. The only analytics on this page is my own selfwritten one, which sends a blank request to my raspberry pi. It temporarily records the last connected IP and the time the last connection was made in order to filter duplicates and permanently records the total visits that have been made to the page - one integer, nothing that tracks you. If you still don't like that, I've put the analytics into their own javascript file so you can easily block them - it's "sendAnalytics.js". You can also block the domain, which is https://86.31.173.35 . And one last thing - high resolutions are stored at WikiImages/[name] instead of WikiImages/resized/[name], so you can also switch those out in the src attribute. 
+
+    </noscript>
+
     <br>
-    <button onclick="ReplaceImages()">I have a strong internet connection, preload images</button>
+    <button onclick="ReplaceImages()">I have a good internet connection, preload high resolution images</button>
 
     <!-- Note - the name is not a typo -->
     <hr> <div class="section">
@@ -170,10 +182,10 @@
 
         </p>
     </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Unknown by MrFotnz</h1>
+        <h1 class="ShipHeader">Protector by MrFotnz</h1>
         <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnknownMrFotnz.jpg"> <br /><p class="description">
 
-            This (presumably combat) ship has 1 rail turret, 2 twin laser turrets, 5 broadside plasma cannons, and costs 7 million.
+            This combat ship has 1 rail turret, 2 twin laser turrets, 10 broadside plasma cannons, and costs 17 million.
 
         </p>
     </div> <hr> <div class="section">

@@ -1,15 +1,3 @@
-//yes, this is basic analytics. But I didn't put google analytics in, this goes to a 40 line python script pretending to be a web server that counts how many requests it receives.
-
-function send(theUrl)
-{
-	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.open( "GET", theUrl, true); // false for synchronous request
-	xmlHttp.send(".");
-	return xmlHttp.responseText;
-}
-
-send("https://86.31.173.35");
-
 //my rubbish method of loading high res images
 function ReplaceImages() {
 	//yes, I suck at javascript. I've never used it before
@@ -17,6 +5,7 @@ function ReplaceImages() {
 	for (var i = 0; i < images.length; i++) {
 		images[i].src = images[i].src.replace("resized/", "");
 	}
+    ShowSnackbar();
 }
 
 function upgradeImage(image)
@@ -25,6 +14,11 @@ function upgradeImage(image)
 	image.src = image.src.replace("resized/", "");
 }
 
+function ShowSnackbar() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
 //runs on scroll
 function visibilityChecker()
 {
@@ -32,15 +26,16 @@ function visibilityChecker()
 	for (var i = 0; i < images.length; i++) {
         if (checkvisible(images[i]))
         {
-            images[i].src = images[i].src.replace("resized/", "");
-            console.log("Replaced image");
+            if (images[i].src.includes("resized"))
+            {
+                images[i].src = images[i].src.replace("resized/", "");
+                console.log("Replaced image");
+            } else {
+                console.log("Already replaced");     
+			}
 		}
 	}
 }
-
-
-
-
 //////////////////////////////// calculates visibility
 
 function posY(elm) {
