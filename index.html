@@ -1,8 +1,12 @@
-﻿<title>Starbase Ships</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+﻿<head>
 
-<head>
+    <title>Starbase Ships</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport">
+    <meta name="description" content="A large repository of Starbase community ships with photos and descriptions.">
+
+
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script>
@@ -10,10 +14,10 @@
 
         function send(theUrl)
         {
-            var xmlHttp = new XMLHttpRequest();
-            xmlHttp.open( "GET", theUrl, true); // false for synchronous request
-            xmlHttp.send(".");
-            return xmlHttp.responseText;
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, true); // false for synchronous request
+        xmlHttp.send(".");
+        return xmlHttp.responseText;
         }
 
         send("https://86.31.173.35");
