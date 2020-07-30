@@ -17,7 +17,7 @@ body {
 
 .description {
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .shipimage {
@@ -94,8 +94,8 @@ button {
     visibility: hidden;
     min-width: 250px;
     margin-left: -125px;
-    background-color: #333;
-    color: #fff;
+    color: #333;
+    background-color: #fff;
     text-align: center;
     border-radius: 2px;
     padding: 16px;
@@ -103,7 +103,11 @@ button {
     z-index: 1;
     left: 50%;
     bottom: 30px;
-    font-size: 17px;
+    font-size: 22px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
 }
 
     #snackbar.show {
