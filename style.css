@@ -60,6 +60,7 @@ img {
 }
 
 button {
+    border-radius:15px;
     border: none;
     color: #444;
     padding: 16px 32px;
@@ -68,17 +69,19 @@ button {
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    transition-duration: 0.4s;
     cursor: pointer;
+    transition-duration: 0.4s;
     background-color: white;
-    color: black;
-    border: 2px solid black;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
 }
 
-button:hover {
-    background-color: black;
-    color: white;
-}
+    button:hover {
+        -webkit-box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.75);
+    }
 
 
 

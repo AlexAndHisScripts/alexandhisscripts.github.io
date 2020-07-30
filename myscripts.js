@@ -1,3 +1,4 @@
+
 //my rubbish method of loading high res images
 function ReplaceImages() {
 	//yes, I suck at javascript. I've never used it before
@@ -5,7 +6,11 @@ function ReplaceImages() {
 	for (var i = 0; i < images.length; i++) {
 		images[i].src = images[i].src.replace("resized/", "");
 	}
-    ShowSnackbar();
+        
+    replacedImages = true;
+
+    //yes, this code is awful, but I spent the last 20 minutes trying to get it to work when I pass a value
+    ShowSnackbarLoading();
 }
 
 function upgradeImage(image)
@@ -14,7 +19,7 @@ function upgradeImage(image)
 	image.src = image.src.replace("resized/", "");
 }
 
-function ShowSnackbar() {
+function ShowSnackbarLoading() {
   var x = document.getElementById("snackbar");
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
