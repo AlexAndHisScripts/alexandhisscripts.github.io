@@ -72,8 +72,9 @@ function scrollY() {
 
 function checkvisible( elm ) {
     var vpH = viewPortHeight(), // Viewport Height
-        st = scrollY(), // Scroll Top
+        st = scrollY() + 500, // Scroll Top
         y = posY(elm);
+        y = y;
 
     return (y > (vpH + st));
 }
