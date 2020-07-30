@@ -1,5 +1,5 @@
 import os
-from PIL import Image
+from PIL import Image, ImageDraw
 import time
 directory = r"C:\Users\alexc\Documents\GitHub\alexandhisscripts.github.io\WikiImages"
 
