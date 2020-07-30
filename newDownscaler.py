@@ -1,5 +1,5 @@
 import os
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 import time
 directory = r"C:\Users\alexc\Documents\GitHub\alexandhisscripts.github.io\WikiImages"
 
@@ -18,6 +18,8 @@ qualitySet = int(input("Quality > "))
 
 if qualitySet == 0:
     qualitySet = 40
+
+debug = False
     
 for filename in os.listdir(directory):
     try:
@@ -54,6 +56,12 @@ for filename in os.listdir(directory):
         ################################
 
         newImage = image.resize((int(newx+1), int(newy+1)))
+
+
+        if debug == True:
+            fnt = ImageFont.truetype(r'C:\Users\alexc\Downloads\YoutubeDownloads\Orbitron\Orbitron-VariableFont_wght.ttf', 50)
+            d = ImageDraw.Draw(newImage)
+            d.text((10,10), "Low \n resolution \n Debug mode", font=fnt, fill=(255,0,0))
 
         savePath = directory + "\\resized\\" + filename
 
