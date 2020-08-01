@@ -8,4 +8,4 @@ function sendAnalytics(theUrl)
 	return xmlHttp.responseText;
 }
 //oooh, yay, hardcoded IP's, this is never going wrong
-sendAnalytics("https://86.31.173.35:8196");
+sendAnalytics("https://86.31.173.35");

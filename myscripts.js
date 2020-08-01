@@ -1,6 +1,6 @@
 function showDevData()
 {
-    alert("Commit #33 non public")
+    alert("Commit #35 private")
 }
 
 function throwOutShittyBrowsers()
