@@ -71,10 +71,6 @@ img {
     background-color:white;
 }
 
-.section:hover {
-    transform: scale(1.05);
-}
-
 button {
     border-radius:15px;
     border: none;
