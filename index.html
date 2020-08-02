@@ -17,360 +17,368 @@
 <body onscroll="visibilityChecker()">
     <button class="tinybutton" onclick="showDevData()"></button>
 
-<div class="gallery">
-    <!--Snackbar-->
-    <div id="snackbar"><img src="downloading.gif" /> </div>
-
-    <h1 class="InfoHeader">Summary</h1>
-    This page is an attempt to record a lot of community ships in a website. It will never be complete, but I hope it provides a good source of inspiration for making your own ships and a way to find information about existing ones. If you want your ship in here, add it (send me a PR on github) or send me a message on discord (IHaveNoLife#6972)! Send me a message on discord or edit it if you see a mistake or you no longer want your ship here.
-
-    <h1 class="InfoHeader"> Why was the page moved? </h1>
-    The page had 83 images, and due to how MediaWiki (which the Starbase wiki uses) works that meant it sent a seperate HTTP request for every single one. It was bad for server performance.
-    <br />
-    You can find the repository this website is stored at <a href="https://github.com/AlexAndHisScripts/alexandhisscripts.github.io">here</a>. Pull requests are welcome.
-
-    <h1 class="InfoHeader">Note</h1>
-    Starbase and its characters, names and other material © Frozenbyte Oy, used with permission but without endorsement.
-
-    <noscript>
-        <h1 class="InfoHeader">For NoScript users</h1>
-        This website uses JS to load higher resolution versions of the images as you scroll down. The only analytics on this page is my own selfwritten one, which sends a blank request to my raspberry pi. It temporarily records the last connected IP and the time the last connection was made in order to filter duplicates and permanently records the total visits that have been made to the page - one integer, nothing that tracks you. If you still don't like that, I've put the analytics into their own javascript file so you can easily block them - it's "sendAnalytics.js". You can also block the domain, which is https://86.31.173.35 . And one last thing - high resolutions are stored at WikiImages/[name] instead of WikiImages/resized/[name], so you can also switch those out in the src attribute.
-
-    </noscript>
-
-    <button onclick="ReplaceImages()">I have a good internet connection, preload high resolution images</button>
-
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Reimos Corvette by Amiaru</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/Quiris.jpg"> <br />
-        <p class="description">
-            A good looking miner by Amiaru.
-        </p>
-    </div>
-
-    <hr> <div class="section">
-        <h1 class="ShipHeader">PC-P1B-II by SubaruSama</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/PC-P1B2.jpg"> <br />
-        <p class="description">
-            A combat ship by SubaruSama. It was designed for the big ship combat event.
-        </p>
-    </div>
-
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Toluca by Diss</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Toluca.jpg"> <br />
-        <p class="description">
-            A mining ship by Diss, containing only the necessities (including lights, of course) and 240 ore crates.
-        </p>
-    </div>
-
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Tricone Heavy Freighter by Einar4050</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Tricone.jpg"> <br />
-        <p class="description">
-            A heaby freighter by Einar4050, featuring 112 cargo crates, a navigation system, and a long flight range. It is designed for large scale interstation transport.
-        </p>
-    </div>
-
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Medium Miner by Einar</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/EinarMediumMiner.jpg"> <br />
-        <p class="description">
-            A medium mining ship by Einar4050, equipped with 64 crates and a navigation system.
-        </p>
-    </div>
-
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Bliksem by MisterMajestic</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Bliksem.jpg"> <br />
-        <p class="description">
-            The Bliksem by MisterMajestic, based off of the Vasama.
-        </p>
-    </div>
-
-    <hr> <div class="section">
-        <h1 class="ShipHeader">EPIC corp "John" modular freighter</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/JohnFreighter.jpg"> <br />
-        <p class="description">
-            EPIC corp's "John" modular freighter has 120 cargo crates, segregated into 8 "containers". Each container has internal batteries, meaning they can be used seperate from the ship, and they are held in by tractor and cargo lock beams. It's modular design means crates can be added or removed based on it's requirements. It has a standing control deck (but a seat can be added easily) and exceptional internal plating, with every cable and pipe easily accessible.
-        </p>
-    </div>
-
-    <hr> <div class="section">
-        <h1 class="ShipHeader">OKI "Mercury" Interceptor</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Mercury.jpg"> <br />
-        <p class="description">
-            A ship created by Okim, acting as a fast response interceptor. The Mercury is created with speed in mind and it sacrifices a lot of that - it has just a single layer of armor and is armed with just two laser cannons. Despite this it is a more than capable fighter due to exceptional maneuverability, good observation, and powerful thruster array. It's aimed at law enforcement organisations, which will value it's 140-145m/s top speed. It's ability to respond to distress calls, raider attacks, and hunt down a troublemaker before it's too late compensates for the lack of proper arnaments and thin armor.
-        </p>
-    </div>
-
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Attis by Duke</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Attis.jpg"> <br />
-        <p class="description">
-            A ship by Duke, described by KaiFB as "Cursed Genius" and "great" by VilleFB. You can find a janky tour <a href="https://www.youtube.com/watch?v=q07_sFH0jGI">here</a>.
-        </p>
-    </div>
-
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Mutleyx's StarBream freighter</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/StarBream.jpg"> <br />
-        <p class="description">
-            A freighter by Mutleyx, named after a tall, thin fish.
-        </p>
-    </div>
+    <div class="gallery">
+        <!--Snackbar-->
+        <div id="snackbar"><img src="downloading.gif" /> </div>
+
+        <h1 class="InfoHeader">Summary</h1>
+        This page is an attempt to record a lot of community ships in a website. It will never be complete, but I hope it provides a good source of inspiration for making your own ships and a way to find information about existing ones. If you want your ship in here, add it (send me a PR on github) or send me a message on discord (IHaveNoLife#6972)! Send me a message on discord or edit it if you see a mistake or you no longer want your ship here.
+
+        <h1 class="InfoHeader"> Why was the page moved? </h1>
+        The page had 83 images, and due to how MediaWiki (which the Starbase wiki uses) works that meant it sent a seperate HTTP request for every single one. It was bad for server performance.
+        <br />
+        You can find the repository this website is stored at <a href="https://github.com/AlexAndHisScripts/alexandhisscripts.github.io">here</a>. Pull requests are welcome.
+
+        <h1 class="InfoHeader">Note</h1>
+        Starbase and its characters, names and other material © Frozenbyte Oy, used with permission but without endorsement.
+
+        <noscript>
+            <h1 class="InfoHeader">For NoScript users</h1>
+            This website uses JS to load higher resolution versions of the images as you scroll down. The only analytics on this page is my own selfwritten one, which sends a blank request to my raspberry pi. It temporarily records the last connected IP and the time the last connection was made in order to filter duplicates and permanently records the total visits that have been made to the page - one integer, nothing that tracks you. If you still don't like that, I've put the analytics into their own javascript file so you can easily block them - it's "sendAnalytics.js". You can also block the domain, which is https://86.31.173.35 . And one last thing - high resolutions are stored at WikiImages/[name] instead of WikiImages/resized/[name], so you can also switch those out in the src attribute.
+
+        </noscript>
+
+        <button onclick="ReplaceImages()">I have a good internet connection, preload high resolution images</button>
+
+        <hr> <div class="section">
+            <h1 class="ShipHeader">RockHopper by Mutleyx</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/RockHopper.jpg"> <br />
+            <p class="description">
+                The RockHopper by Mutleyx, for the first few mining trips.
+            </p>
+        </div>
+
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Reimos Corvette by Amiaru</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/Quiris.jpg"> <br />
+            <p class="description">
+                A good looking miner by Amiaru.
+            </p>
+        </div>
+
+        <hr> <div class="section">
+            <h1 class="ShipHeader">PC-P1B-II by SubaruSama</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PC-P1B2.jpg"> <br />
+            <p class="description">
+                A combat ship by SubaruSama. It was designed for the big ship combat event.
+            </p>
+        </div>
+
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Toluca by Diss</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Toluca.jpg"> <br />
+            <p class="description">
+                A mining ship by Diss, containing only the necessities (including lights, of course) and 240 ore crates.
+            </p>
+        </div>
+
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Tricone Heavy Freighter by Einar4050</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Tricone.jpg"> <br />
+            <p class="description">
+                A heaby freighter by Einar4050, featuring 112 cargo crates, a navigation system, and a long flight range. It is designed for large scale interstation transport.
+            </p>
+        </div>
+
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Medium Miner by Einar</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/EinarMediumMiner.jpg"> <br />
+            <p class="description">
+                A medium mining ship by Einar4050, equipped with 64 crates and a navigation system.
+            </p>
+        </div>
+
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Bliksem by MisterMajestic</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Bliksem.jpg"> <br />
+            <p class="description">
+                The Bliksem by MisterMajestic, based off of the Vasama.
+            </p>
+        </div>
+
+        <hr> <div class="section">
+            <h1 class="ShipHeader">EPIC corp "John" modular freighter</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/JohnFreighter.jpg"> <br />
+            <p class="description">
+                EPIC corp's "John" modular freighter has 120 cargo crates, segregated into 8 "containers". Each container has internal batteries, meaning they can be used seperate from the ship, and they are held in by tractor and cargo lock beams. It's modular design means crates can be added or removed based on it's requirements. It has a standing control deck (but a seat can be added easily) and exceptional internal plating, with every cable and pipe easily accessible.
+            </p>
+        </div>
+
+        <hr> <div class="section">
+            <h1 class="ShipHeader">OKI "Mercury" Interceptor</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Mercury.jpg"> <br />
+            <p class="description">
+                A ship created by Okim, acting as a fast response interceptor. The Mercury is created with speed in mind and it sacrifices a lot of that - it has just a single layer of armor and is armed with just two laser cannons. Despite this it is a more than capable fighter due to exceptional maneuverability, good observation, and powerful thruster array. It's aimed at law enforcement organisations, which will value it's 140-145m/s top speed. It's ability to respond to distress calls, raider attacks, and hunt down a troublemaker before it's too late compensates for the lack of proper arnaments and thin armor.
+            </p>
+        </div>
+
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Attis by Duke</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Attis.jpg"> <br />
+            <p class="description">
+                A ship by Duke, described by KaiFB as "Cursed Genius" and "great" by VilleFB. You can find a janky tour <a href="https://www.youtube.com/watch?v=q07_sFH0jGI">here</a>.
+            </p>
+        </div>
 
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Mutleyx's Talon</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Talon.jpg"> <br />
-        <p class="description">
-            A talon-shaped cargo lock beam ship.
-        </p>
-    </div>
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Mutleyx's StarBream freighter</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/StarBream.jpg"> <br />
+            <p class="description">
+                A freighter by Mutleyx, named after a tall, thin fish.
+            </p>
+        </div>
 
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Akess's "Cherax" Miner/Hauler</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Cherax.jpg"> <br /><p class="description">
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Mutleyx's Talon</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Talon.jpg"> <br />
+            <p class="description">
+                A talon-shaped cargo lock beam ship.
+            </p>
+        </div>
 
-            A fairly large hauler in a horseshoe design. It has two fixed mount autocannons and one turreted autocannon. It's an adaption from a ship in dual universe and took about a week to design. It has buttons to open and close doors and 64 ore crates. There are cargo locks but they don't work because they only come from two directions.
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Akess's "Cherax" Miner/Hauler</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Cherax.jpg"> <br /><p class="description">
 
-            <i>Information and footage courtesy of TorkoTV on youtube</i>
+                A fairly large hauler in a horseshoe design. It has two fixed mount autocannons and one turreted autocannon. It's an adaption from a ship in dual universe and took about a week to design. It has buttons to open and close doors and 64 ore crates. There are cargo locks but they don't work because they only come from two directions.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Pincher by G8M8N8/Nate</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedNateCouchesWhen.jpg"> <br /><p class="description">
+                <i>Information and footage courtesy of TorkoTV on youtube</i>
 
-            A forklift ship by G8M8N8/Nate.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Pincher by G8M8N8/Nate</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedNateCouchesWhen.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Bruiser by G8M8N8/Nate</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/201ByNate.jpg"> <br /><p class="description">
+                A forklift ship by G8M8N8/Nate.
 
-            The Bruiser by G8M8N8/Nate.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Bruiser by G8M8N8/Nate</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/201ByNate.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">OKI Spiker speeder bike by G8M8N8/Nate</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Nate-OkiSpiker.jpg"> <br /><p class="description">
+                The Bruiser by G8M8N8/Nate.
 
-            A speeder bike by G8M8N8/Nate.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">OKI Spiker speeder bike by G8M8N8/Nate</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Nate-OkiSpiker.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Kryostahl's Hauler</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/KryrostahlsHauler.jpg"> <br />
-        <p class="description">
+                A speeder bike by G8M8N8/Nate.
 
-            This ship has 52 ore containers and you can mount an additional 28 ore blocks to the side. It also has 2 generator units, 2 fuel chambers, and some rangefinders that intersect to form a crosshair. It also has a panel that can retract and extend and holds displays and a button.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Kryostahl's Hauler</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/KryrostahlsHauler.jpg"> <br />
+            <p class="description">
 
-            <i>Information and footage courtesy of TorkoTV on youtube</i>
+                This ship has 52 ore containers and you can mount an additional 28 ore blocks to the side. It also has 2 generator units, 2 fuel chambers, and some rangefinders that intersect to form a crosshair. It also has a panel that can retract and extend and holds displays and a button.
 
+                <i>Information and footage courtesy of TorkoTV on youtube</i>
 
-            <!--Nonstandard formatting here, it won't look good without the breaks moved around.-->
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">F.L.E.A Compact Fighter by Blitz</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FleaByBlitz.jpg"> <br> <p class="description">
 
-            A fighter by Blitz that took 20-24 hours to make, outfitted with four autocannons. It's cockpit can extend and retract to let you get into it and it costs less than 1.3 million. It has 3 generator units (the guns take a lot of power).
+                <!--Nonstandard formatting here, it won't look good without the breaks moved around.-->
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">F.L.E.A Compact Fighter by Blitz</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FleaByBlitz.jpg"> <br> <p class="description">
 
-            <i>Information and footage courtesy of TorkoTV on youtube</i>
+                A fighter by Blitz that took 20-24 hours to make, outfitted with four autocannons. It's cockpit can extend and retract to let you get into it and it costs less than 1.3 million. It has 3 generator units (the guns take a lot of power).
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Broadhead Personal Shuttle by Frentru</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/BroadheadShuttle.jpg"> <br /><p class="description">
+                <i>Information and footage courtesy of TorkoTV on youtube</i>
 
-            A personal shuttle by Frentru. It goes 150m/s for nearly 6 hours straight and has easy access to the internals. It has plenty of info readouts, a GPS (Duke's version, not ISAN), a generator governor from Kryostahl, a nav system, and distance, resource rate, runtime, and physical range estimates. It has a total range of 3 000 000 metres.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Broadhead Personal Shuttle by Frentru</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/BroadheadShuttle.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Unnamed mining ship by Olivia</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedOlivia.jpg"> <br /><p class="description">
+                A personal shuttle by Frentru. It goes 150m/s for nearly 6 hours straight and has easy access to the internals. It has plenty of info readouts, a GPS (Duke's version, not ISAN), a generator governor from Kryostahl, a nav system, and distance, resource rate, runtime, and physical range estimates. It has a total range of 3 000 000 metres.
 
-            This mining ship has 6 box thrusters, 2 small fuel tanks, 4 fuel rod chambers, and 4 spare fuel rod racks. It has 2 generators and carries 30 tonnes of ore. It also has a glass cockpit, the ability to turn off the generators remotely, batteries, and a flight computer. It also has 2 passenger seats.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Unnamed mining ship by Olivia</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedOlivia.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">"The Little Miner" by Olivia, a prospecting ship.</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/OliviaTheLittleMiner.jpg"> <br /><p class="description">
+                This mining ship has 6 box thrusters, 2 small fuel tanks, 4 fuel rod chambers, and 4 spare fuel rod racks. It has 2 generators and carries 30 tonnes of ore. It also has a glass cockpit, the ability to turn off the generators remotely, batteries, and a flight computer. It also has 2 passenger seats.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Manual Flight Mining Ship by Olivia</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/ManualFlightMiningShip.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">"The Little Miner" by Olivia, a prospecting ship.</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/OliviaTheLittleMiner.jpg"> <br /><p class="description">
 
-            Carries 2 ore units internally and up to 9 externally for a total of 11. It costs about 500 000 and doesn't have an MFC, meaning the ship has to be balanced.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Manual Flight Mining Ship by Olivia</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/ManualFlightMiningShip.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Frentru's first miner</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FrentruFirstMiner.jpg"> <br /><p class="description">
+                Carries 2 ore units internally and up to 9 externally for a total of 11. It costs about 500 000 and doesn't have an MFC, meaning the ship has to be balanced.
 
-            Frentru's first miner, designed to be cost efficient and get the funds for better ships.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Frentru's first miner</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FrentruFirstMiner.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Prospecting drone by Frentru</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FrentruProspector.jpg"> <br /><p class="description">
+                Frentru's first miner, designed to be cost efficient and get the funds for better ships.
 
-            A prospecting drone by Frentru. It's a little expensive, costing 373k, but has 6 axis control and a detachable flashlight.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Prospecting drone by Frentru</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FrentruProspector.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Fixer's hauler / miner</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FixerMiner.jpg"> <br /><p class="description">
+                A prospecting drone by Frentru. It's a little expensive, costing 373k, but has 6 axis control and a detachable flashlight.
 
-            A 35-metre long miner with 16 box thrusters, 128 cargo boxes, 24 batteries, 4 fuel chambers (each with a tier 3 enhancer), 4 generator units, 4 radiators, 4 medium propellant tanks, and 8 resource bridges. It also has Duke's coordinate system. It costs 14 million and also has a railgun turret.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Fixer's hauler / miner</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FixerMiner.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">OKI carrier design by Fixer</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FixerCarrier.jpg"> <br /><p class="description">
+                A 35-metre long miner with 16 box thrusters, 128 cargo boxes, 24 batteries, 4 fuel chambers (each with a tier 3 enhancer), 4 generator units, 4 radiators, 4 medium propellant tanks, and 8 resource bridges. It also has Duke's coordinate system. It costs 14 million and also has a railgun turret.
 
-            A carrier by Fixer. It has 8 slots for small fighters, with 16 small propellant containers, 8 fuel rods, and 3 cargo lock containers. It's propulsion consists of 12 box thrusters, 14 triangle thrusters, and 6 medium propellant containers. There are 4 fuel chambers and 4 generator units with 4 spare fuel rods for the carrier itself and 64 batteries. It costs 7 million credits.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">OKI carrier design by Fixer</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FixerCarrier.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Unnamed personal shuttle/explorer by Frentru</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FrentruPersonalShuttle.jpg"> <br /><p class="description">
+                A carrier by Fixer. It has 8 slots for small fighters, with 16 small propellant containers, 8 fuel rods, and 3 cargo lock containers. It's propulsion consists of 12 box thrusters, 14 triangle thrusters, and 6 medium propellant containers. There are 4 fuel chambers and 4 generator units with 4 spare fuel rods for the carrier itself and 64 batteries. It costs 7 million credits.
 
-            A personal shuttle / short range explorer by Frentru. It goes at least 100m/s, probably between 140-150. It can run for 5-6 hours and is equipped with ISAN location and heading.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Unnamed personal shuttle/explorer by Frentru</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FrentruPersonalShuttle.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">OKI "Speedmaster" Jetbike</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/SpeedMasterJetBike-OKI.jpg"> <br /><p class="description">
+                A personal shuttle / short range explorer by Frentru. It goes at least 100m/s, probably between 140-150. It can run for 5-6 hours and is equipped with ISAN location and heading.
 
-            A fast 2 person zipper to move between distant stations, like between the main cluster and the Imperial outpost. It can carry a stack of ore and has a resource bridge.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">OKI "Speedmaster" Jetbike</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/SpeedMasterJetBike-OKI.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Ratatoskr by CalenLoki</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/RatatoskrByCalenLoki.jpg"> <br /><p class="description">
+                A fast 2 person zipper to move between distant stations, like between the main cluster and the Imperial outpost. It can carry a stack of ore and has a resource bridge.
 
-            A cheap (64 000) personal transport by CalenLoki.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Ratatoskr by CalenLoki</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/RatatoskrByCalenLoki.jpg"> <br /><p class="description">
 
-        </p>
-    </div>
+                A cheap (64 000) personal transport by CalenLoki.
 
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Ratatoskr Version 2 by CalenLoki</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Ratatoskr2.jpg"> <br /><p class="description">
+            </p>
+        </div>
 
-            Version 2 of CalenLoki's Ratatoskr. It has double the range and a precise aiming reticle, but got slightly slower. It costs 68 000.
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Ratatoskr Version 2 by CalenLoki</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Ratatoskr2.jpg"> <br /><p class="description">
 
-        </p>
-    </div>
+                Version 2 of CalenLoki's Ratatoskr. It has double the range and a precise aiming reticle, but got slightly slower. It costs 68 000.
 
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Unknown Light Fighter by Frentru</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FrentruUnknown.jpg"> <br /><p class="description">
+            </p>
+        </div>
 
-            A light fighter by Frentru. It's moderately armored and very cheap.
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Unknown Light Fighter by Frentru</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FrentruUnknown.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Protector by MrFotnz</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnknownMrFotnz.jpg"> <br /><p class="description">
+                A light fighter by Frentru. It's moderately armored and very cheap.
 
-            This combat ship has 1 rail turret, 2 twin laser turrets, 10 broadside plasma cannons, and costs 17 million.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Protector by MrFotnz</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnknownMrFotnz.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Buffalo by Kenetor</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/SuperHauler.jpg"> <br /><p class="description">
+                This combat ship has 1 rail turret, 2 twin laser turrets, 10 broadside plasma cannons, and costs 17 million.
 
-            The Buffalo by Kenetor holds 152 crates and has a whopping 8 triangle thrusters (in a unique side facing design) and 16 box thrusters. It was previously named the "Super Hauler".
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Buffalo by Kenetor</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/SuperHauler.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Unknown by Enildor</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnknownEnildor.jpg"> <br /><p class="description">
+                The Buffalo by Kenetor holds 152 crates and has a whopping 8 triangle thrusters (in a unique side facing design) and 16 box thrusters. It was previously named the "Super Hauler".
 
-            An unknown ship by Enildor. It costs 2 000 000 credits and has 40 crates and 4 box thrusters.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Unknown by Enildor</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnknownEnildor.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Hauler Plus by Kenetor</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/HaulerPlus.jpg"> <br /><p class="description">
+                An unknown ship by Enildor. It costs 2 000 000 credits and has 40 crates and 4 box thrusters.
 
-            An upgraded version of the hauler by Kenetor. It has 32 crates and 4 triangle thrusters. There is probably more info about this ship in Kenetor's streams so this section will probably be updated soon once I have watched them.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Hauler Plus by Kenetor</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/HaulerPlus.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">K Ship by Kenetor</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/KShip.jpg"> <br /><p class="description">
+                An upgraded version of the hauler by Kenetor. It has 32 crates and 4 triangle thrusters. There is probably more info about this ship in Kenetor's streams so this section will probably be updated soon once I have watched them.
 
-            A K shaped ship by Kenetor. It has 12 autocannons, some ore storage, and a lot of rear mounted thrusters. There is probably more info about this ship in Kenetor's streams so this section will probably be updated soon once I have watched them.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">K Ship by Kenetor</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/KShip.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Pax Pastor (Peace Keeper) by FatFly for Empire</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PaxPastor.jpg"> <br /><p class="description">
+                A K shaped ship by Kenetor. It has 12 autocannons, some ore storage, and a lot of rear mounted thrusters. There is probably more info about this ship in Kenetor's streams so this section will probably be updated soon once I have watched them.
 
-            A gunship. The name is Latin. All other details are classified.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Pax Pastor (Peace Keeper) by FatFly for Empire</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PaxPastor.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Akantha Ignis Pluviam (Rain Fire) by FatFly for Empire</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/AkanthaIgnisPluviam.jpg"> <br /><p class="description">
+                A gunship. The name is Latin. All other details are classified.
 
-            A fighter by FatFly for Empire with a Latin name. All other details are classified.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Akantha Ignis Pluviam (Rain Fire) by FatFly for Empire</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/AkanthaIgnisPluviam.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Nevercomeback Air by Germane</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/NeverComeBackAir.jpg"> <br /><p class="description">
+                A fighter by FatFly for Empire with a Latin name. All other details are classified.
 
-            The "Nevercomeback Air" by Germane.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Nevercomeback Air by Germane</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/NeverComeBackAir.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">GDYV Corsair by SM326 of GIAT Driveyards</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/GDYVCorsair.jpg">  <br /><p class="description">
+                The "Nevercomeback Air" by Germane.
 
-            The Corsair is a light mining ship. It comes with 60 mining crates, a plasma cannon for fracturing roids, two retractable seats, ISAN mono, anti collision, and SOS light patterns. It is built with an easy to repair design - all pipes and cables are easily accessible. A small battery bank provides a temporary backup power source in case of generator failure. This ship is most efficient at solo or duo mining.
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Frost F-12 by LukaszLutek</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FrostLukaszLutek.jpg">  <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">GDYV Corsair by SM326 of GIAT Driveyards</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/GDYVCorsair.jpg">  <br /><p class="description">
 
-            The Frost F-12 by LukaszLutek. It's a small and fast fighter with light armament.
+                The Corsair is a light mining ship. It comes with 60 mining crates, a plasma cannon for fracturing roids, two retractable seats, ISAN mono, anti collision, and SOS light patterns. It is built with an easy to repair design - all pipes and cables are easily accessible. A small battery bank provides a temporary backup power source in case of generator failure. This ship is most efficient at solo or duo mining.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Frost F-12 by LukaszLutek</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/FrostLukaszLutek.jpg">  <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Microwave by LukaszLutek</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/MicrowaveByLukaszLutek.jpg">  <br /><p class="description">
+                The Frost F-12 by LukaszLutek. It's a small and fast fighter with light armament.
 
-            The Microwave is a small ship that runs ISAN and has a generator optimization script. It can also act as a small crate for items.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Microwave by LukaszLutek</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/MicrowaveByLukaszLutek.jpg">  <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Snowflake by LukaszLutek</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Snowflake.jpg">  <br /><p class="description">
+                The Microwave is a small ship that runs ISAN and has a generator optimization script. It can also act as a small crate for items.
 
-            A small battery powered ship meant to be a disposable scout or personal transport.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Snowflake by LukaszLutek</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Snowflake.jpg">  <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Moonshot by Hatman</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Moonshot.jpg">  <br /><p class="description">
+                A small battery powered ship meant to be a disposable scout or personal transport.
 
-            This ship was the first to make it to the moon, piloted by Hatman. Because rangefinders didn't work on the moon's surface at the time, it ended up crashing into it!
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Moonshot by Hatman</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Moonshot.jpg">  <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Quasar Systems C-01 "UH-220"</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UH220.jpg"> <br /><p class="description">
+                This ship was the first to make it to the moon, piloted by Hatman. Because rangefinders didn't work on the moon's surface at the time, it ended up crashing into it!
 
-            The UH2020 by DanTheBurgerMan of Quasar Systems. You can find a video tour <a href="https://yadi.sk/i/bsgbSrS6LTdyHA">here</a>. DanTheBurgerMan's ingame name is "Hermes".
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Quasar Systems C-01 "UH-220"</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UH220.jpg"> <br /><p class="description">
 
-        </p>
-    </div>
-    <!--commented out because I can't get permission from someone I don't know.
+                The UH2020 by DanTheBurgerMan of Quasar Systems. You can find a video tour <a href="https://yadi.sk/i/bsgbSrS6LTdyHA">here</a>. DanTheBurgerMan's ingame name is "Hermes".
+
+            </p>
+        </div>
+        <!--commented out because I can't get permission from someone I don't know.
     </div> <hr> <div class="section">
         <h1 class="ShipHeader">Advanced Starfury by Unknown</h1>
         <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/AdvancedStarfury.jpg"> <br /><p class="description">
@@ -379,259 +387,259 @@
 
         </p>
     </div>-->
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Mosquito by Mutleyx</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Mosquito.jpg"> <br /><p class="description">
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Mosquito by Mutleyx</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Mosquito.jpg"> <br /><p class="description">
 
-            A simple but striking personal transport.
+                A simple but striking personal transport.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">OKI "Moti" Turbobike</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Moti.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">OKI "Moti" Turbobike</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Moti.jpg"> <br /><p class="description">
 
-            A tiny but still 2 seated vessel that consists of an array of thrusters, a tank, a generator, and... that's it. It moves at the max speed, 150m/s, and has both turtle and cruise modes for moving slowly and leaving thrusters on when you're not controlling it. It is also equipped with ISAN mono for easy navigation. It has 4 box thrusters, a small generator, medium tank, and a single seat. "Moti" is latin for "motion."
+                A tiny but still 2 seated vessel that consists of an array of thrusters, a tank, a generator, and... that's it. It moves at the max speed, 150m/s, and has both turtle and cruise modes for moving slowly and leaving thrusters on when you're not controlling it. It is also equipped with ISAN mono for easy navigation. It has 4 box thrusters, a small generator, medium tank, and a single seat. "Moti" is latin for "motion."
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">OKI "Mite" Hauler</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Mite.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">OKI "Mite" Hauler</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Mite.jpg"> <br /><p class="description">
 
-            A simple 4 crate hauler running purely on batteries and propelled by manoeuvring thrusters. It is designed to be an affordable mining ship to help acquire funds for a larger one.
+                A simple 4 crate hauler running purely on batteries and propelled by manoeuvring thrusters. It is designed to be an affordable mining ship to help acquire funds for a larger one.
 
-            It has no brakes or strafe, with manoeuvring done by the rear thruster array and roll by dedicated thrusters. The ship's structure is both simple and sturdy. It has 10 batteries to provide enough flight time to reach both outposts and a speed of 80m/s means you can get there in 18-22 minutes. Going deeper into the belt might not be profitable due to the low capacity and battery dependency.
+                It has no brakes or strafe, with manoeuvring done by the rear thruster array and roll by dedicated thrusters. The ship's structure is both simple and sturdy. It has 10 batteries to provide enough flight time to reach both outposts and a speed of 80m/s means you can get there in 18-22 minutes. Going deeper into the belt might not be profitable due to the low capacity and battery dependency.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Ormenos Racing Ship by Duke</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Ormenos.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Ormenos Racing Ship by Duke</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Ormenos.jpg"> <br /><p class="description">
 
-            The Ormenos racing ship is designed for speed and maneuverability. A youtube video containing a flight test can be found <a href="https://www.youtube.com/watch?v=Txg-_V5MdZg&feature=youtu.be">here</a>.
+                The Ormenos racing ship is designed for speed and maneuverability. A youtube video containing a flight test can be found <a href="https://www.youtube.com/watch?v=Txg-_V5MdZg&feature=youtu.be">here</a>.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Speedstep by Lunar</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Speedstepship.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Speedstep by Lunar</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Speedstepship.jpg"> <br /><p class="description">
 
-            A fairly small ship by Lunar. It's a fast 140m/s well armored ship with oninium plating from most angles, 2 hardpoints to mount guns and an ISAN mono system. It has 2 box thrusters and 2 triangle thrusters.
+                A fairly small ship by Lunar. It's a fast 140m/s well armored ship with oninium plating from most angles, 2 hardpoints to mount guns and an ISAN mono system. It has 2 box thrusters and 2 triangle thrusters.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Yeeter by BeatBreaker</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedBeatBreaker.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Yeeter by BeatBreaker</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedBeatBreaker.jpg"> <br /><p class="description">
 
-            A combat-oriented ship by BeatBreaker, armed with 6 fixed mount railguns and 4 autocannons.
+                A combat-oriented ship by BeatBreaker, armed with 6 fixed mount railguns and 4 autocannons.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">YT-1300 Comodore by BeatBreaker</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/YT-1300Comodore.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">YT-1300 Comodore by BeatBreaker</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/YT-1300Comodore.jpg"> <br /><p class="description">
 
-            A millenium-falcon inspired ship, shown waiting at a large ship combat event.
+                A millenium-falcon inspired ship, shown waiting at a large ship combat event.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Magni by Mr. Lingon"</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PossiblySkarmbildByMrLibng.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Magni by Mr. Lingon"</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PossiblySkarmbildByMrLibng.jpg"> <br /><p class="description">
 
-            A dedicated wiki page can be found <a href="https://wiki.starbasegame.com/index.php/LingCORP_Magni">here</a> and the corp's other ships can be found <a href="https://bit.ly/LCO-home">here</a>.
+                A dedicated wiki page can be found <a href="https://wiki.starbasegame.com/index.php/LingCORP_Magni">here</a> and the corp's other ships can be found <a href="https://bit.ly/LCO-home">here</a>.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Kyanite Mk01 by splet</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/SpletUnnamedFighter.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Kyanite Mk01 by splet</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/SpletUnnamedFighter.jpg"> <br /><p class="description">
 
-            A fighter by splet, which reportedly has a "nice and cosy" cockpit.
+                A fighter by splet, which reportedly has a "nice and cosy" cockpit.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">OKI "Myrmidon" Troopship</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PoliceAPCOkim.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">OKI "Myrmidon" Troopship</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PoliceAPCOkim.jpg"> <br /><p class="description">
 
-            Okim adapted their "old not-so-successful-for-military-use APC" into a SWAT vehicle. It has 3 layers of armour everywhere with thrusters, generator, tank, and crew compartment having 4.
+                Okim adapted their "old not-so-successful-for-military-use APC" into a SWAT vehicle. It has 3 layers of armour everywhere with thrusters, generator, tank, and crew compartment having 4.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">OKI Moonfish Duo</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/OkimMoonfishV3.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">OKI Moonfish Duo</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/OkimMoonfishV3.jpg"> <br /><p class="description">
 
-            A large ship designed for long range exploration built off of the original Moonfish that reached the moon. The DUO variant was reconfigured to better utilise available resources, drastically improving efficiency and speed. It moves at 120m/s and has the following electronics:
-            <ul>
-                <li class="bullet">Turtle, which lowers speed to 10% for manoeuvring.</li>
-                <li class="bullet">Cruise, which toggles centering on the main thrust lever.</li>
-                <li class="bullet">AutoPower, which monitors power consumption and adjusts generator output accordingly.</li>
-                <li class="bullet">AutoTank, which turns off unused fuel tanks.</li>
-                <li class="bullet">Alerts, which alerts when power, coolant, and propellant reach critical levels.</li>
-            </ul>
+                A large ship designed for long range exploration built off of the original Moonfish that reached the moon. The DUO variant was reconfigured to better utilise available resources, drastically improving efficiency and speed. It moves at 120m/s and has the following electronics:
+                <ul>
+                    <li class="bullet">Turtle, which lowers speed to 10% for manoeuvring.</li>
+                    <li class="bullet">Cruise, which toggles centering on the main thrust lever.</li>
+                    <li class="bullet">AutoPower, which monitors power consumption and adjusts generator output accordingly.</li>
+                    <li class="bullet">AutoTank, which turns off unused fuel tanks.</li>
+                    <li class="bullet">Alerts, which alerts when power, coolant, and propellant reach critical levels.</li>
+                </ul>
 
-            It also has 36 box thrusters, 8 generators 2+4 with enhancers, 4 double radiators, 116 spare fuel rods, and 20 large propellant tanks.
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Hanarr by DURATECH</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/HanarrByStrumtrieber.jpg"> <br /><p class="description">
+                It also has 36 box thrusters, 8 generators 2+4 with enhancers, 4 double radiators, 116 spare fuel rods, and 20 large propellant tanks.
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Hanarr by DURATECH</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/HanarrByStrumtrieber.jpg"> <br /><p class="description">
 
-            A ship by DURATECH. It has over 130 cargo crates, with a maximum speed of 120m/s. It has a spacious interior, integrated cargo lock frame, automatic asteroid avoidance, asteroid approach system, automatic energy and fuel conservation, integrated ISAN, quick "hop out and mine" seats, and is future proof for mining lasers.
+                A ship by DURATECH. It has over 130 cargo crates, with a maximum speed of 120m/s. It has a spacious interior, integrated cargo lock frame, automatic asteroid avoidance, asteroid approach system, automatic energy and fuel conservation, integrated ISAN, quick "hop out and mine" seats, and is future proof for mining lasers.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Nightblade by Nordwolf</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/NightBlade.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Nightblade by Nordwolf</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/NightBlade.jpg"> <br /><p class="description">
 
-            One of, if not the most effective fighters. It has 16 guns and 4 box thrusters.
+                One of, if not the most effective fighters. It has 16 guns and 4 box thrusters.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Unnammed by Recatek</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedRecatek.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Unnammed by Recatek</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedRecatek.jpg"> <br /><p class="description">
 
-            Recatek created the most optimised ship they could, and this was the result.
+                Recatek created the most optimised ship they could, and this was the result.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Miner by Matias Gray</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedShipByMatiasGrey.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Miner by Matias Gray</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedShipByMatiasGrey.jpg"> <br /><p class="description">
 
-            Matias Gray's first ship, with some asymmetry.
+                Matias Gray's first ship, with some asymmetry.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Rubix Cube by Pickaxe, Sadder</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PickaxeRubixCube.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Rubix Cube by Pickaxe, Sadder</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PickaxeRubixCube.jpg"> <br /><p class="description">
 
-            A Rubix cube created by Pickaxe, Sadder that took part in the large ships combat event.
+                A Rubix cube created by Pickaxe, Sadder that took part in the large ships combat event.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">OKI "Mule" Shuttle</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Mule.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">OKI "Mule" Shuttle</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Mule.jpg"> <br /><p class="description">
 
-            The Mule IIC is a multipurpose shuttle designed around its cargo lock frames. It can carry various ship parts, supplies, chunks of asteroids, or up to 54 tightly packed ore stacks. It has side mounted guides to make it easier to cram ores in and 4 resource bridges to make mining easier. It has lots of hardpoints for additional thrusters, resource bridges, tools, and weapons and an ISAN navigation system. It moves at between 70-48m/s depending on how much it's hauling and comes with the following electronics:
-            <ul>
-                <li class="bullet">Turtle, which lowers speed to 10% for manoeuvring.</li>
-                <li class="bullet">Cruise, which toggles centering on the main thrust lever.</li>
-                <li class="bullet">AutoPower, which monitors power consumption and adjusts generator output accordingly.</li>
-                <li class="bullet">AutoTank, which turns off unused fuel tanks.</li>
-                <li class="bullet">Alerts, which alerts when power, coolant, and propellant reach critical levels.</li>
-            </ul>
+                The Mule IIC is a multipurpose shuttle designed around its cargo lock frames. It can carry various ship parts, supplies, chunks of asteroids, or up to 54 tightly packed ore stacks. It has side mounted guides to make it easier to cram ores in and 4 resource bridges to make mining easier. It has lots of hardpoints for additional thrusters, resource bridges, tools, and weapons and an ISAN navigation system. It moves at between 70-48m/s depending on how much it's hauling and comes with the following electronics:
+                <ul>
+                    <li class="bullet">Turtle, which lowers speed to 10% for manoeuvring.</li>
+                    <li class="bullet">Cruise, which toggles centering on the main thrust lever.</li>
+                    <li class="bullet">AutoPower, which monitors power consumption and adjusts generator output accordingly.</li>
+                    <li class="bullet">AutoTank, which turns off unused fuel tanks.</li>
+                    <li class="bullet">Alerts, which alerts when power, coolant, and propellant reach critical levels.</li>
+                </ul>
 
-            It has 6 box thrusters, two generators with both coolant and radiator support, a receiver, yolol stacks, 4 small tanks, and 6 batteries. It's also been accepted to the ship shop!
+                It has 6 box thrusters, two generators with both coolant and radiator support, a receiver, yolol stacks, 4 small tanks, and 6 batteries. It's also been accepted to the ship shop!
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Sparrow IV ship by Duke</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedDuke.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Sparrow IV ship by Duke</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedDuke.jpg"> <br /><p class="description">
 
-            A dedicated wiki page can be found <a href="https://wiki.starbasegame.com/index.php/LingCORP_Sparrow_IV">here</a> and the corp's other ships can be found <a href="https://lingcorp-sb.webnode.se/">here</a>.
+                A dedicated wiki page can be found <a href="https://wiki.starbasegame.com/index.php/LingCORP_Sparrow_IV">here</a> and the corp's other ships can be found <a href="https://lingcorp-sb.webnode.se/">here</a>.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Hype Van by Duke</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/BlueHypeVanDuke.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Hype Van by Duke</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/BlueHypeVanDuke.jpg"> <br /><p class="description">
 
-            A dedicated wiki page can be found  <a href="https://wiki.starbasegame.com/index.php/LingCORP_Hype_Van">here</a> and the corp's other ships can be found <a href="https://bit.ly/LCO-home">here</a>.
+                A dedicated wiki page can be found  <a href="https://wiki.starbasegame.com/index.php/LingCORP_Hype_Van">here</a> and the corp's other ships can be found <a href="https://bit.ly/LCO-home">here</a>.
 
-        </p>
-    </div> <hr> <div class="section">
-    <h1 class="ShipHeader">Purple Hypevan by Mr. Lingon</h1>
-    <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PurpleHypevanByMrLibng.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Purple Hypevan by Mr. Lingon</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PurpleHypevanByMrLibng.jpg"> <br /><p class="description">
 
-        A purple hypevan by Mr. Lingon
+                A purple hypevan by Mr. Lingon
 
-    </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Unnamed ship by TGess</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedShipByTGess.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Unnamed ship by TGess</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedShipByTGess.jpg"> <br /><p class="description">
 
-            An unnamed ship by TGess, shown off in #ship-design right after an update allowed you to paint ships.
+                An unnamed ship by TGess, shown off in #ship-design right after an update allowed you to paint ships.
 
-        </p>
-    </div>
-    <hr> <div class="section">
-        <h1 class="ShipHeader">OKI "Magnus" Heavy Freighter</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Magnus.jpg"> <br /><p class="description">
+            </p>
+        </div>
+        <hr> <div class="section">
+            <h1 class="ShipHeader">OKI "Magnus" Heavy Freighter</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Magnus.jpg"> <br /><p class="description">
 
-            A large 250 crate heavy freighter designed for group mining or bulk freighting. It has 36 thrusters, propelling it to 80m/s, and was adapted from the "Moonfish" explorer. It contains 8 1+2 enhanced generators, 4 double radiators, 8 extra fuel rods, 3 seats, 4 resource ports, 8 batteries, 2 receivers (ISAN mono and signal), and some custom electronics. These electronics include a "turtle" mode that cuts thrust to 10% thrust in stations, "cruise" that enables and disables thrust lever centering, "AutoPower" that adjusts generators to only output what is required, "AutoTank" which turns off unused tanks, and "Alerts", which alerts when power, coolant, and propellant reach critical levels.
+                A large 250 crate heavy freighter designed for group mining or bulk freighting. It has 36 thrusters, propelling it to 80m/s, and was adapted from the "Moonfish" explorer. It contains 8 1+2 enhanced generators, 4 double radiators, 8 extra fuel rods, 3 seats, 4 resource ports, 8 batteries, 2 receivers (ISAN mono and signal), and some custom electronics. These electronics include a "turtle" mode that cuts thrust to 10% thrust in stations, "cruise" that enables and disables thrust lever centering, "AutoPower" that adjusts generators to only output what is required, "AutoTank" which turns off unused tanks, and "Alerts", which alerts when power, coolant, and propellant reach critical levels.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">OKI "Mare" Hauler</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/OkimCheapHauler.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">OKI "Mare" Hauler</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/OkimCheapHauler.jpg"> <br /><p class="description">
 
-            A small, fast, and cheap ore carriage designed as a very early starter ship. It can carry 2 stacks of ores in its containers and 12 stacks bolted to special exterior mounts (as well as 12 more bolted to existing ones, but that's not advised.) It has 2 box thrusters with a YOLOL script adjusting output as necessary and a turtle and cruise mode for moving slowly and leaving the thrust lever held down. It also has a small generator and a small fuel tank.
+                A small, fast, and cheap ore carriage designed as a very early starter ship. It can carry 2 stacks of ores in its containers and 12 stacks bolted to special exterior mounts (as well as 12 more bolted to existing ones, but that's not advised.) It has 2 box thrusters with a YOLOL script adjusting output as necessary and a turtle and cruise mode for moving slowly and leaving the thrust lever held down. It also has a small generator and a small fuel tank.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">OKI "Manta" Explorer</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/MantaByOkim.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">OKI "Manta" Explorer</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/MantaByOkim.jpg"> <br /><p class="description">
 
-            The Manta is a light exploration / personal transportation vehicle designed to operate in zones with navigational hazards. It has a top speed of 120m/s and exceptional manoeuvring to help dodge asteroids or manoeuvre around a station. It can carry 2 passengers and one stack of ores as well as a weapon or tool of choice onto it's 1 free hardpoint. The wings can be used to carry additional fuel rods and goods by bolting them on. It comes with ISAN mono and a receiver to scan for signals. It has an AutoPower system and enhanced generators for long time spans between refuelling.
+                The Manta is a light exploration / personal transportation vehicle designed to operate in zones with navigational hazards. It has a top speed of 120m/s and exceptional manoeuvring to help dodge asteroids or manoeuvre around a station. It can carry 2 passengers and one stack of ores as well as a weapon or tool of choice onto it's 1 free hardpoint. The wings can be used to carry additional fuel rods and goods by bolting them on. It comes with ISAN mono and a receiver to scan for signals. It has an AutoPower system and enhanced generators for long time spans between refuelling.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Pirate ship by RaptorPettingZoo</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PirateShip.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Pirate ship by RaptorPettingZoo</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/PirateShip.jpg"> <br /><p class="description">
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Marmot family by Okim</h1> <p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Marmot family by Okim</h1> <p class="description">
 
-            The following 3 ships are part of Okim's "Marmot" freighter family. They use the same chassis (1 small generator, 6 box thrusters, 2 small propellant tanks, 2 resource ports, 2 seats and ISAN.) They come in 3 variants that differ in the amount of cargo containers (24-48-72) and speed changes due to the weight. All 3 have a hardpoint at the bottom for basic armaments and mining tools and can perform up/down strafing but no left/right strafe. There is a video showing them off at https://yadi.sk/d/9kzHGrYlqxqsYA . Additionally, they all have an ISAN mono coordinate system, power and propellant management chips, and turtle and cruise movement assistants.
+                The following 3 ships are part of Okim's "Marmot" freighter family. They use the same chassis (1 small generator, 6 box thrusters, 2 small propellant tanks, 2 resource ports, 2 seats and ISAN.) They come in 3 variants that differ in the amount of cargo containers (24-48-72) and speed changes due to the weight. All 3 have a hardpoint at the bottom for basic armaments and mining tools and can perform up/down strafing but no left/right strafe. There is a video showing them off at https://yadi.sk/d/9kzHGrYlqxqsYA . Additionally, they all have an ISAN mono coordinate system, power and propellant management chips, and turtle and cruise movement assistants.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Marmot-24 by Okim</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/marmot24.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Marmot-24 by Okim</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/marmot24.jpg"> <br /><p class="description">
 
-            This ship moves at 89m/s with 24 cargo containers.
+                This ship moves at 89m/s with 24 cargo containers.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Marmot-48 by Okim</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/marmot48.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Marmot-48 by Okim</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/marmot48.jpg"> <br /><p class="description">
 
-            This ship moves at 70 m/s with 48 cargo containers.
+                This ship moves at 70 m/s with 48 cargo containers.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Marmot-72 by Okim</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/marmot72.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Marmot-72 by Okim</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/marmot72.jpg"> <br /><p class="description">
 
-            This ship moves at 56 m/s with 72 cargo containers.
+                This ship moves at 56 m/s with 72 cargo containers.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Aura Mk2 by Tatakai</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Level2Hauler.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Aura Mk2 by Tatakai</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Level2Hauler.jpg"> <br /><p class="description">
 
-            This ship as 60 crates and apparently paid for itself and then some on its first journey. It has ISAN quad and moves at 130m/s without cargo.
+                This ship as 60 crates and apparently paid for itself and then some on its first journey. It has ISAN quad and moves at 130m/s without cargo.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Glacier Asteroid Hauler by LukaszLutek</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/GlacierAsteroidHauler.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Glacier Asteroid Hauler by LukaszLutek</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/GlacierAsteroidHauler.jpg"> <br /><p class="description">
 
-            The Glacier Asteroid Hauler by LukaszLutek has 10 asteroid locking rings and can lock up to 20 medium asteroids. It can also have 160 additional ore crates for storage.
+                The Glacier Asteroid Hauler by LukaszLutek has 10 asteroid locking rings and can lock up to 20 medium asteroids. It can also have 160 additional ore crates for storage.
 
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Shale MK01 by Splet</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/ShaleMK1.jpg"> <br /><p class="description">
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Shale MK01 by Splet</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/ShaleMK1.jpg"> <br /><p class="description">
 
-            The Shale MK01 costs 1,048,356 credits. It is a simple and relatively inexpensive craft, intended for use in personal transport and light fighter combat. It's features include (quoting):
+                The Shale MK01 costs 1,048,356 credits. It is a simple and relatively inexpensive craft, intended for use in personal transport and light fighter combat. It's features include (quoting):
 
-            <ul>
-                <li class="bullet">A slick downwards-opening cockpit model</li>
-                <li class="bullet">A YOLOL-modulated reactor</li>
-                <li class="bullet">Two batteries</li>
-                <li class="bullet">Intentionally removable plates for replacement of the fuel rod and gas canister.</li>
-                <li class="bullet">Solo laser cannon.</li>
-                <li class="bullet">Toggleable rangefinder laser sight.</li>
-                <li class="bullet">Pitch modification button to allow for precise aiming.</li>
-            </ul>
+                <ul>
+                    <li class="bullet">A slick downwards-opening cockpit model</li>
+                    <li class="bullet">A YOLOL-modulated reactor</li>
+                    <li class="bullet">Two batteries</li>
+                    <li class="bullet">Intentionally removable plates for replacement of the fuel rod and gas canister.</li>
+                    <li class="bullet">Solo laser cannon.</li>
+                    <li class="bullet">Toggleable rangefinder laser sight.</li>
+                    <li class="bullet">Pitch modification button to allow for precise aiming.</li>
+                </ul>
 
-        </p>
-    </div>
-    <!-- commented out because it's hard to get permission when you don't know who to get permission from
+            </p>
+        </div>
+        <!-- commented out because it's hard to get permission when you don't know who to get permission from
     </div> <hr> <div class="section">
         <h1 class="ShipHeader">Danger Bee by Unknown</h1>
         <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/DangerBee.jpg"> <br /><p class="description">
@@ -640,117 +648,117 @@
 
         </p>
     </div> -->
-    <hr> <div class="section">
-        <h1 class="ShipHeader">OKI Manatee Freighter</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Manatee.jpg"> <br /><p class="description">
+        <hr> <div class="section">
+            <h1 class="ShipHeader">OKI Manatee Freighter</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Manatee.jpg"> <br /><p class="description">
 
-            The Manatee medium sized freighter is a 120 crate fast freighter for trading runs or mining. It has good speed and good agility (barring roll) and strafe capabilities. It moves at 73m/s and has the following electronics:
-            <ul>
-                <li class="bullet">Turtle, which lowers speed to 10% for manoeuvring.</li>
-                <li class="bullet">Cruise, which toggles centering on the main thrust lever.</li>
-                <li class="bullet">AutoPower, which monitors power consumption and adjusts generator output accordingly.</li>
-                <li class="bullet">AutoTank, which turns off unused fuel tanks.</li>
-                <li class="bullet">Alerts, which alerts when power, coolant, and propellant reach critical levels.</li>
-            </ul>
+                The Manatee medium sized freighter is a 120 crate fast freighter for trading runs or mining. It has good speed and good agility (barring roll) and strafe capabilities. It moves at 73m/s and has the following electronics:
+                <ul>
+                    <li class="bullet">Turtle, which lowers speed to 10% for manoeuvring.</li>
+                    <li class="bullet">Cruise, which toggles centering on the main thrust lever.</li>
+                    <li class="bullet">AutoPower, which monitors power consumption and adjusts generator output accordingly.</li>
+                    <li class="bullet">AutoTank, which turns off unused fuel tanks.</li>
+                    <li class="bullet">Alerts, which alerts when power, coolant, and propellant reach critical levels.</li>
+                </ul>
 
-            It also has 16 box thrusters, 2 large propellant tanks, 2+4 generator with radiators, coolant and enhancers, 3 resource ports, 3 seats, and a receiver.
+                It also has 16 box thrusters, 2 large propellant tanks, 2+4 generator with radiators, coolant and enhancers, 3 resource ports, 3 seats, and a receiver.
 
-        </p>
+            </p>
+        </div>
+
+        <hr> <div class="section">
+            <h1 class="ShipHeader">Javelin Mk.2 by Survivor 500</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/JavelinMk2.jpg"> <br /><p class="description">
+
+                The Javelin Mk.2 by Survivor is a light combat ship. It is armed with 4 laser cannons and is highly manoeuvrable. It has two small fuel tanks and a single fuel rod powering it's four main triangle thrusters, giving it adequate range for escort missions. It's equipped with ISAN mono with a top speed of 140-145m/s.
+
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">UNSC Frigate by epicduck43</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedHaloShipByEpicDuck.jpg"> <br /><p class="description">
+
+                An unnamed ship by epicduck43. The front mounted railguns have since been shrouded.
+
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Quiris interceptor by Amiaru</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/AmiaruFighter.jpg"> <br /><p class="description">
+
+                Quiris interceptor by Amiaru. It costs 5 750 000 and has 4 lasers, 1 fuel chamber, 2 generator units, 1 small propellant tanks, and 4 batteries.
+
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Unnamed rocket shaped ship by Duke.</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedRocketByDuke.jpg"> <br /><p class="description">
+
+                An unnamed rocket-shaped ship by Duke. It is finished, it's just that Duke, quote "Couldn't be bothered to plate it."
+
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Demetrios by Black</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedShipByBlack.jpg"> <br /><p class="description">
+
+                The Demetrios by Black. This was shown off by Okim.
+
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Unnamed ship by Hr. Sukupuutto</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Gemini.jpg"> <br /><p class="description">
+
+                An unnamed ship by Hr Sukupuutto, which has been tested as able to carry two large asteroids.
+
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">The Wing II by Fixer</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/TheWing2.jpg"> <br /><p class="description">
+
+                A ship made by Fixer for The Pilot Series. It is a successor to the Old Republic's (a scrapped dev faction) Wing fighter and moves at 100m/s.
+
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Koios Transferens by FatFly</h1>
+            <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/KoiosTransferensByFatFly.jpg"> <br /><p class="description">
+
+                FatFly's transport ship is named Koios Transferens, which translates to "Meaningful Transport." This is for F.A.T. Ltd. which stands for "Fundamentalis Appropinguans Technologia", or Fundamental Approach to Technology. It's the first product of it's subsidiary, F.A.T Ltd. Hauling. It's full name is the "KOIOS Transferens Mk2-5S1G3W80c++" and it has 80 crates, 3 cargo lock frames, and 2 cargo lock beams. It is propelled by 8 box thrusters, 8 triangle thrusters, and 4x4 maneuvering thrusters. It has an advanced flight computer with strafing capabilities, 4 passenger seats, and a single fuel chamber with an enhancer lvl2 on 2 generators, 2 cooling racks, and 2 radiators. It also has 4 auxiliary batteries, 4 coolant rechargers, 2 fuel rod racks, and 5 small propellant tanks. It also has an engineering panel for ship debugging with LCD panels for monitoring ship resources in the passenger bay and cockpit. It also has one basic yolol rack/chip for scripting, 1 plasma turret for cracking open asteroids, 4 range finders for improved navigation, and 6 resources so you can mine from any angle.
+
+            </p>
+        </div> <hr> <div class="section">
+            <h1 class="ShipHeader">Nebulon B by Simulator Haven</h1> <p class="description">
+                Simulator Haven made an 11 part video series showing their construction of a Nebulon B from Star Wars. <br />
+
+                <a href="https://www.youtube.com/watch?v=5F9vDKARjGw"> Part One </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=ANYxdeyDd8A"> Part Two </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=9AjpHGZ0gTw"> Part Three </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=iDHZbhn1NWA"> Part Four </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=cVMq07I7fUc"> Part Five </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=_jZbilYlZ_w"> Part Six </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=xlE2L1V23dM"> Part Seven </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=TgE3A4jzcrU"> Part Eight </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=bhtHgI-Akck"> Part Nine </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=k4CGg9f9KoQ"> Part Ten </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=Y41swlLyoGg"> Part Eleven </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=pa1h_aFhvvY"> Combat with it </a> <br>
+
+                <a href="https://www.youtube.com/watch?v=MfyvjOGCtVY"> More combat </a> <br>
+
+                <div style="padding-top: 5vh"> </div>
+
+            </p>
+        </div>
+
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> </div>
+
+
     </div>
-
-    <hr> <div class="section">
-        <h1 class="ShipHeader">Javelin Mk.2 by Survivor 500</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/JavelinMk2.jpg"> <br /><p class="description">
-
-            The Javelin Mk.2 by Survivor is a light combat ship. It is armed with 4 laser cannons and is highly manoeuvrable. It has two small fuel tanks and a single fuel rod powering it's four main triangle thrusters, giving it adequate range for escort missions. It's equipped with ISAN mono with a top speed of 140-145m/s.
-
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">UNSC Frigate by epicduck43</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedHaloShipByEpicDuck.jpg"> <br /><p class="description">
-
-            An unnamed ship by epicduck43. The front mounted railguns have since been shrouded.
-
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Quiris interceptor by Amiaru</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/AmiaruFighter.jpg"> <br /><p class="description">
-
-            Quiris interceptor by Amiaru. It costs 5 750 000 and has 4 lasers, 1 fuel chamber, 2 generator units, 1 small propellant tanks, and 4 batteries.
-
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Unnamed rocket shaped ship by Duke.</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedRocketByDuke.jpg"> <br /><p class="description">
-
-            An unnamed rocket-shaped ship by Duke. It is finished, it's just that Duke, quote "Couldn't be bothered to plate it."
-
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Demetrios by Black</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/UnnamedShipByBlack.jpg"> <br /><p class="description">
-
-            The Demetrios by Black. This was shown off by Okim.
-
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Unnamed ship by Hr. Sukupuutto</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/Gemini.jpg"> <br /><p class="description">
-
-            An unnamed ship by Hr Sukupuutto, which has been tested as able to carry two large asteroids.
-
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">The Wing II by Fixer</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/TheWing2.jpg"> <br /><p class="description">
-
-            A ship made by Fixer for The Pilot Series. It is a successor to the Old Republic's (a scrapped dev faction) Wing fighter and moves at 100m/s.
-
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Koios Transferens by FatFly</h1>
-        <img class="Shipimage" onmouseover="upgradeImage(this)" src="WikiImages/resized/KoiosTransferensByFatFly.jpg"> <br /><p class="description">
-
-            FatFly's transport ship is named Koios Transferens, which translates to "Meaningful Transport." This is for F.A.T. Ltd. which stands for "Fundamentalis Appropinguans Technologia", or Fundamental Approach to Technology. It's the first product of it's subsidiary, F.A.T Ltd. Hauling. It's full name is the "KOIOS Transferens Mk2-5S1G3W80c++" and it has 80 crates, 3 cargo lock frames, and 2 cargo lock beams. It is propelled by 8 box thrusters, 8 triangle thrusters, and 4x4 maneuvering thrusters. It has an advanced flight computer with strafing capabilities, 4 passenger seats, and a single fuel chamber with an enhancer lvl2 on 2 generators, 2 cooling racks, and 2 radiators. It also has 4 auxiliary batteries, 4 coolant rechargers, 2 fuel rod racks, and 5 small propellant tanks. It also has an engineering panel for ship debugging with LCD panels for monitoring ship resources in the passenger bay and cockpit. It also has one basic yolol rack/chip for scripting, 1 plasma turret for cracking open asteroids, 4 range finders for improved navigation, and 6 resources so you can mine from any angle.
-
-        </p>
-    </div> <hr> <div class="section">
-        <h1 class="ShipHeader">Nebulon B by Simulator Haven</h1> <p class="description">
-            Simulator Haven made an 11 part video series showing their construction of a Nebulon B from Star Wars. <br />
-
-            <a href="https://www.youtube.com/watch?v=5F9vDKARjGw"> Part One </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=ANYxdeyDd8A"> Part Two </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=9AjpHGZ0gTw"> Part Three </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=iDHZbhn1NWA"> Part Four </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=cVMq07I7fUc"> Part Five </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=_jZbilYlZ_w"> Part Six </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=xlE2L1V23dM"> Part Seven </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=TgE3A4jzcrU"> Part Eight </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=bhtHgI-Akck"> Part Nine </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=k4CGg9f9KoQ"> Part Ten </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=Y41swlLyoGg"> Part Eleven </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=pa1h_aFhvvY"> Combat with it </a> <br>
-
-            <a href="https://www.youtube.com/watch?v=MfyvjOGCtVY"> More combat </a> <br>
-
-            <div style="padding-top: 5vh"> </div>
-
-        </p>
-    </div>
-
-    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> </div>
-
-
-</div>
 </body>
