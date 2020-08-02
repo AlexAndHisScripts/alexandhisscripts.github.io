@@ -1,6 +1,6 @@
 function showDevData()
 {
-    alert("Commit #41 private")
+    alert("Public release 1.0")
 }
 
 function throwOutShittyBrowsers()
