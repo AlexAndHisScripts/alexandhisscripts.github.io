@@ -57,14 +57,16 @@ for filename in os.listdir(directory):
 
         newImage = image.resize((int(newx+1), int(newy+1)))
 
+        newImage = newImage.convert("RGB")
 
+        print(str(filename))
+        
         if debug == True:
             fnt = ImageFont.truetype(r'C:\Users\alexc\Downloads\YoutubeDownloads\Orbitron\Orbitron-VariableFont_wght.ttf', 50)
             d = ImageDraw.Draw(newImage)
             d.text((10,10), "Low \n resolution \n Debug mode", font=fnt, fill=(255,0,0))
 
-        savePath = directory + "\\resized\\" + filename
-
+        savePath = directory + "\\resized\\" + filename.replace("png","jpg")
         newImage.save(savePath, "JPEG", quality=qualitySet)
 
         percentage = 100 * i / fileCount

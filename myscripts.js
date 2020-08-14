@@ -26,7 +26,7 @@ function ReplaceImages() {
 	//yes, I suck at javascript. I've never used it before
 	var images = document.getElementsByClassName("shipimage");
 	for (var i = 0; i < images.length; i++) {
-		images[i].src = images[i].src.replace("resized/", "");
+		images[i].src = images[i].src.replace("resized/", "")
 	}
         
     replacedImages = true;
@@ -38,7 +38,7 @@ function ReplaceImages() {
 function upgradeImage(image)
 {
 	//runs when you mouse over an image
-	image.src = image.src.replace("resized/", "");
+	image.src = image.src.replace("resized/", "")
 }
 
 function ShowSnackbarLoading() {
@@ -55,7 +55,7 @@ function visibilityChecker()
         {
             if (images[i].src.includes("resized"))
             {
-                images[i].src = images[i].src.replace("resized/", "");
+                images[i].src = images[i].src.replace("resized/", "")
                 console.log("Replaced image");
             } else {
                 console.log("Already replaced");     
